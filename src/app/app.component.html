@@ -1,0 +1,7 @@
+<div class="main">
+  <app-side-bar [parent]="this" [timeScale]="currentTimeScale" />
+  <div class="cards">
+    <app-card *ngFor="let item of data" [timeScale]="currentTimeScale" [timeData]="item"/>
+  </div>
+</div>
+

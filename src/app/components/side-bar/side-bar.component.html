@@ -1,0 +1,19 @@
+<div class="side-bar">
+    <div class="user">
+        <div class="imgWrapper">
+            <img src="assets/images/image-jeremy.png" />
+        </div>
+        <div class="userText">
+            <span class="report">Report for</span>
+            <span class="name">Jeremy Robson</span>
+        </div>
+    </div>
+    <div class="times">
+        <span 
+        class="timeChoice"
+        *ngFor="let time of times"
+        [class.active]="time === timeScale"
+        (click)="changeTime(time)"
+        >{{time}}</span>
+    </div>
+</div>

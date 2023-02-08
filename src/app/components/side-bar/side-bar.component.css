@@ -1,0 +1,193 @@
+.side-bar{
+    background-color: var(--dark-blue);
+    border-radius: 20px;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 250px;
+}
+
+.user{
+    height: 70%;
+    background-color: var(--blue);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgWrapper{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex: 0 0 150px; */
+}
+img{
+    width: 60%;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.userText{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.report{
+    font-size: 20px;
+    color: var(--pale-blue)
+}
+
+.name{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.times{
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.timeChoice{
+    font-size: 4.5vw;
+    font-weight: 400;
+    color: var(--desaturated-blue);
+    text-transform: capitalize;
+}
+
+.timeChoice:hover{
+    color: white;
+    font-weight: 500;
+}
+
+.timeChoice.active {
+    color: white;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 750px) {
+    
+    .report{
+        font-size: 3vw;
+    }
+    
+    .name{
+        font-size: 7vw;
+    }
+    
+    img{
+        width: 40%;
+    }
+    
+    .timeChoice{
+        font-size: 3.5vw;
+    }
+    
+}
+
+@media screen and (min-width: 1000px) {
+    
+    .side-bar{
+        height: 85vh ;
+        width: 250px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .times{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 30px;
+        
+    }
+
+    .timeChoice{
+        font-size: 1.5vw;
+        cursor: pointer;
+    }
+
+    .user{
+        flex-direction: column;
+        justify-content:flex-start;
+    }
+
+    .imgWrapper{
+        height: 40%;
+    }
+    
+    .report{
+        font-size: 1.5vw;
+        margin-left: 30px;
+    }
+
+    .name{
+        font-size: 4vw;
+        margin-left: 30px;
+    }
+
+    img{
+        width: 90%;
+        margin-left: 30px;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    
+    .side-bar{
+        height: 80vh;
+    }
+
+    .timeChoice{
+        font-size: 1vw;
+    }
+
+    .report{
+        font-size: 1vw;
+    }
+
+    .name{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 1425px){
+    
+    .side-bar{
+        height: 65vh;
+        width: 300px;
+    }
+
+    /* .timeChoice{
+        font-size: 1.5vw;
+        cursor: pointer;
+    }
+
+    .report{
+        font-size: 1.5vw;
+        margin-left: 20px;
+    }
+
+    .name{
+        font-size: 3vw;
+        margin-left: 20px;
+    } */
+  }
+
+  @media screen and (min-width: 1625px){
+      
+      .side-bar{
+          height: 60vh;
+      }
+    }
+@media screen and (max-width: 350px){
+    
+    .userText{
+        width: 40%;
+    }
+}

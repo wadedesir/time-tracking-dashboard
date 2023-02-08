@@ -1,0 +1,148 @@
+
+.card{
+    color: white;
+    min-height: 200px;
+    max-height: 250px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    min-width: 90vw;
+    max-width: 400px;
+    margin-top: 25px;
+}
+
+.card-data {
+    height: 77%;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var(--dark-blue);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-data:hover{
+    background-color: var(--desaturated-blue);
+    cursor: pointer;
+}
+
+.icon{
+    position: absolute;
+    right: 15px;
+}
+
+.icon-ellipsis:hover{
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.heading span{
+    font-size: var(--card-titles);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.hours{
+    font-weight: 200;
+    font-size: 8vw;
+}
+
+.previous{
+    color: var(--pale-blue);
+    margin-top: 5px;
+}
+
+ /* Colors */
+.work{
+    background-color: var(--kinda-orange);
+}
+.play{
+    background-color: var(--soft-blue);
+}
+.study{
+    background-color: var(--light-red);
+}
+.exercise{
+    background-color: var(--lime-green);
+}
+.social{
+    background-color: var(--violet);
+}
+.care{
+    background-color: var(--soft-orange);
+}
+
+
+@media screen and (min-width: 555px) {
+    .hours{
+        font-size: 6.5vw;
+    }
+}
+
+@media screen and (min-width: 555px) {
+    .card{
+        min-width: 270px;
+        /* max-width: 270px; */
+    }
+    .data{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .card{
+        min-height: 150px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .hours{
+        font-size: 4vw;
+    }
+    .card{
+        min-height: 160px;
+        max-height: 270px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card{
+        min-height: 190px;
+        min-width: 300px;
+    }
+}
+
+@media screen and (min-width: 1425px) {
+    .card{
+        min-height: 230px;
+    }
+}
+
+@media screen and (min-width: 1625px) {
+    .card{
+        min-height: 270px;
+    }
+}
