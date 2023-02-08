@@ -1,6 +1,6 @@
 # Frontend Mentor - Time tracking dashboard solution
 
-This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
 
 ## Table of contents
 
@@ -13,10 +13,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -32,14 +28,6 @@ Users should be able to:
 
 ![Website Thumbnail](https://raw.githubusercontent.com/wadedesir/time-tracking-dashboard/main/screenshot.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
 - Live Site URL: [https://desir.dev/projects/time-tracking-dashboard/index.html](https://desir.dev/projects/time-tracking-dashboard/index.html)
@@ -49,65 +37,53 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- CSS custom properties: Helped to organize the colors and styles provided for this project
+- Lots of Flexbox
+- Mobile-first layout
+- [Angular](https://angular.io/) - Web Framework. First time usign this. Tons of fun
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Angular is FUN! Totally not what I was expecting as I am coming from react based frameworks, but it wasn't much trouble to get accustomed to. Some things are easier when compared to React, but alot of things seem to a little harder to figure out too. But I'm just getting started so can't be judging it too much. I might just not know my way around.
 
-To see how you can add code snippets, see below:
+Working with actual HTML code again instead of the usual JSX was weird, although they put a spin on just how much you are able to do with these html tags. Being able to create a loop for html tags is pretty cool. Because It can be a drag rewriting html code sometimes. I'm sure there's so much more than just the \*ngFor that I learned about.
+
+Typescript can also be very finnicky. It does make some things easier to work with but you have to know what you're doing. Intellisense works alot better since it knows which types you're working with and can it can provide better suggestions, but the type checking can get in the way. I did have to resort to using the ! to let it know at some moments that a variable would definitely have a value. I'm sure there's a more standard way to do it but that was the solution that worked for me.
+
+All in all I'm super happy I was able to complete this project in a fairly decent amount of time. I think my slight experience with typescript helped a little bit and also the fact that things are fairly simple once you understand a few key parts of angular.
+
+---
+
+### Here are some snippets of code I feel particularly proud of:
+
+This was a nice little templating hack that becomes possible with angular. in the past I would have used a framework like EJS or standard JSX to accomplish the same thing but this is how Angular implements it
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<img src="assets/images/icon-{{title}}.svg" class="icon" />
+<!-- grabs svg file based on title of card-->
 ```
 
+This piece of CSS right here came in handy as well.What I wanted to accomplish was to have a hover state for an ellipsis icon that would get brighter. With a normal svg I would have been to edit the colors directly with CSS but since it was within an img tag, I had to revert to other devices.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.icon-ellipsis:hover {
+  filter: brightness(0) invert(1);
 }
 ```
 
+I'm proud of this OnInit() function. Super simple honestly and can be compared to a useEffect in react but it came in handy with setting specific values after the component had received the data.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+ngOnInit(): void {
+  this.processData(this.timeData?.timeframes!, this.timeScale)
+}
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Observables gave me trouble. I still don't quite have a perfect grasp of how they work but I was able to find a solution for my problem. My issue was that I was not able to refresh certain components from within another. It would have been a fairly straight-forward fix in react but I think it gave me the most trouble out of all that I did. Will definitely take a further look into this.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Wade Desir
+- Portfolio - [Wade's Porfolio](https://www.desir.dev)

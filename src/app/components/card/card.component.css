@@ -101,7 +101,6 @@
 @media screen and (min-width: 555px) {
     .card{
         min-width: 270px;
-        /* max-width: 270px; */
     }
     .data{
         flex-direction: column;

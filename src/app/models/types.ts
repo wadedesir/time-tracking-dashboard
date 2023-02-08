@@ -1,5 +1,6 @@
 export type TimeScale = 'daily' | 'weekly' | 'monthly';
-export interface TimeData {
+
+export interface TimeData { //card data structure
     title: string,
     timeframes: TimeFrames
 }

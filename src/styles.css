@@ -25,7 +25,6 @@
 body{
   font-family: Rubik, Arial, Helvetica, sans-serif;
   background-color: var(--very-dark-blue);
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

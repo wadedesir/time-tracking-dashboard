@@ -7,5 +7,5 @@ import { TimeScale } from '../models/types';
 })
 
 export class CommonService {
-  updateCards = new Subject<TimeScale>()
+  updateCards = new Subject<TimeScale>() //will allow updates to cards based on changes to time scale 
 }

@@ -21,7 +21,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex: 0 0 150px; */
 }
 img{
     width: 60%;
@@ -162,21 +161,6 @@ img{
         height: 65vh;
         width: 300px;
     }
-
-    /* .timeChoice{
-        font-size: 1.5vw;
-        cursor: pointer;
-    }
-
-    .report{
-        font-size: 1.5vw;
-        margin-left: 20px;
-    }
-
-    .name{
-        font-size: 3vw;
-        margin-left: 20px;
-    } */
   }
 
   @media screen and (min-width: 1625px){

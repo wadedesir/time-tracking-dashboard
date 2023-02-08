@@ -10,10 +10,12 @@
     </div>
     <div class="times">
         <span 
-        class="timeChoice"
-        *ngFor="let time of times"
-        [class.active]="time === timeScale"
-        (click)="changeTime(time)"
-        >{{time}}</span>
+            class="timeChoice"
+            *ngFor="let time of times"
+            [class.active]="time === timeScale"
+            (click)="changeTime(time)"
+        > <!-- function to change time scale as well and conditional that sets currently active time scale to white -->
+        {{time}}
+        </span>
     </div>
 </div>

@@ -1,7 +1,10 @@
 <div class="main">
-  <app-side-bar [parent]="this" [timeScale]="currentTimeScale" />
+  
+  <app-side-bar [parent]="this" [timeScale]="currentTimeScale" /> <!-- pass down parent class in order to be able to call function that changes timeScale -->
+  
   <div class="cards">
-    <app-card *ngFor="let cardData of data" [timeScale]="currentTimeScale" [timeData]="cardData"/>
+    <!-- Make a card for each item and pass down the data to the component, also passed down time scale variable to be able to update cards based on selected Time Scale  -->
+    <app-card *ngFor="let cardData of data" [timeScale]="currentTimeScale" [timeData]="cardData"/> 
   </div>
 </div>
 

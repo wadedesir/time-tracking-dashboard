@@ -9,13 +9,13 @@ import { CommonService } from 'src/app/services/common.service';
 })
 
 export class CardComponent implements OnInit {
-  @Input() timeData?: TimeData;
-  @Input() timeScale: TimeScale = 'weekly';
+  @Input() timeData?: TimeData; //card data for this specific card
+  @Input() timeScale: TimeScale = 'weekly'; //set default time scale
   
   title: string = '';
-  current: number = 0
-  previous: number = 0
-  last: PastDate = {
+  current: number = 0 //stores current hours for this time frame
+  previous: number = 0 //sets past hours
+  last: PastDate = { //makes it easier to specify text for previous dates
     daily: 'Yesterday - ',
     weekly: 'Last Week - ',
     monthly: 'Last Month - '
@@ -24,7 +24,7 @@ export class CardComponent implements OnInit {
 
   constructor(private commonService: CommonService){
     commonService.updateCards.asObservable().subscribe((time: TimeScale) => {
-      this.processData(this.timeData?.timeframes!, time)
+      this.processData(this.timeData?.timeframes!, time) //process data function updates the card data each time a change is detected
     })
   }
 
@@ -33,8 +33,7 @@ export class CardComponent implements OnInit {
   }
 
   processData(data: TimeFrames, time: TimeScale){
-    time = time ? time : this.timeScale
-    this.title = this.timeData!.title.toLowerCase()
+    this.title = this.timeData!.title.toLowerCase() //sets lowercase title as they are used for class names
     this.current = data[time].current
     this.previous = data[time].previous
     this.pastString = this.last[time]
