@@ -59,6 +59,12 @@
   }
 }
 
+@media screen and (min-width: 2210px){ 
+  .main{
+      width: 60vw;
+  }
+}
+
 @media screen and (min-width: 2560px){ 
   .main{
       width: 50vw;

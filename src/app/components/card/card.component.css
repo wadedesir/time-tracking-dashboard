@@ -157,7 +157,13 @@
     }
 }
 
-@media screen and (min-width: 2560px){ 
+@media screen and (min-width: 2210px){ 
+    .hours{
+        font-size: 3vw;
+    }
+  }
+
+@media screen and (min-width: 2500px){ 
     .hours{
         font-size: 3vw;
     }
