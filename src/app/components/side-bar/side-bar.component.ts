@@ -11,12 +11,9 @@ import { CommonService } from 'src/app/services/common.service'
 export class SideBarComponent {
     @Input() timeScale?: TimeScale;
     @Input() parent?: AppComponent;
-    // @Input() changeTimeScale: Function;
     times: TimeScale[] = ['daily', 'weekly', 'monthly']
 
-    constructor(private commonService: CommonService){
-      
-    }
+    constructor(private commonService: CommonService){}
 
     changeTime(time: TimeScale){
       this.commonService.updateCards.next(time)

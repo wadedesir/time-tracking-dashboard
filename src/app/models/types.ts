@@ -6,12 +6,18 @@ export interface TimeData {
 
 export interface TimeFrames {
     daily: TimeOption,
-    monthly: TimeOption,
     weekly: TimeOption
+    monthly: TimeOption,
 }
 
 interface TimeOption {
     current: number,
     previous: number
+}
+
+export interface PastDate {
+    daily: string,
+    weekly: string,
+    monthly: string
 }
 

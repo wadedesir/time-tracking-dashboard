@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TimeScale, TimeData, TimeFrames } from 'src/app/models/types';
+import { TimeScale, TimeData, TimeFrames, PastDate } from 'src/app/models/types';
 import { CommonService } from 'src/app/services/common.service';
 
 @Component({
@@ -10,33 +10,34 @@ import { CommonService } from 'src/app/services/common.service';
 
 export class CardComponent implements OnInit {
   @Input() timeData?: TimeData;
-  @Input() childTest: any = [];
-  @Input() timeScale?: TimeScale;
+  @Input() timeScale: TimeScale = 'weekly';
   
   title: string = '';
-  iconStyle: string = ''
   current: number = 0
   previous: number = 0
+  last: PastDate = {
+    daily: 'Yesterday - ',
+    weekly: 'Last Week - ',
+    monthly: 'Last Month - '
+  }
+  pastString: string = ''
 
   constructor(private commonService: CommonService){
     commonService.updateCards.asObservable().subscribe((time: TimeScale) => {
-      this.title = this.timeData!.title
-      this.title = this.title.toLowerCase()
-      this.current = this.timeData!.timeframes[time].current
-      this.previous = this.timeData!.timeframes[time].previous
+      this.processData(this.timeData?.timeframes!, time)
     })
   }
 
   ngOnInit(): void {
-    this.processData(this.timeData?.timeframes!)
-    console.log(this.timeData)
+    this.processData(this.timeData?.timeframes!, this.timeScale)
   }
 
-  processData(data: TimeFrames){
-    this.title = this.timeData!.title
-    this.title = this.title.toLowerCase()
-    this.current = data[this.timeScale!].current
-    this.previous = data[this.timeScale!].previous
+  processData(data: TimeFrames, time: TimeScale){
+    time = time ? time : this.timeScale
+    this.title = this.timeData!.title.toLowerCase()
+    this.current = data[time].current
+    this.previous = data[time].previous
+    this.pastString = this.last[time]
   }
 
 }

@@ -5,8 +5,7 @@ import { TimeScale } from '../models/types';
 @Injectable({
   providedIn: 'root'
 })
-export class CommonService {
- updateCards = new Subject<TimeScale>()
 
-  constructor() { }
+export class CommonService {
+  updateCards = new Subject<TimeScale>()
 }

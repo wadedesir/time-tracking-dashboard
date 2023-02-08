@@ -10,18 +10,12 @@ import * as data from './mockData/data.json'
 })
 
 export class AppComponent {
-  updateTime = new Subject()
   times: TimeScale[] = ['daily', 'weekly', 'monthly']
   currentTimeScale: TimeScale = 'weekly'
   data = Array.from(data)
-  constructor(){
-    console.log(this.data)
-    console.log(typeof data)
-  }
 
   changeTimeScale(time: TimeScale){
     this.currentTimeScale = time
-    this.updateTime.next(time)
   }
 
 }
