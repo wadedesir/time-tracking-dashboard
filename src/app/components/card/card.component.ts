@@ -10,7 +10,7 @@ import { CommonService } from 'src/app/services/common.service';
 
 export class CardComponent implements OnInit {
   @Input() timeData?: TimeData; //card data for this specific card
-  @Input() timeScale: TimeScale = 'weekly'; //set default time scale
+  @Input() timeScale: TimeScale = 'weekly'; //initiate default time scale
   
   title: string = '';
   current: number = 0 //stores current hours for this time frame
@@ -34,9 +34,9 @@ export class CardComponent implements OnInit {
 
   processData(data: TimeFrames, time: TimeScale){
     this.title = this.timeData!.title.toLowerCase() //sets lowercase title as they are used for class names
-    this.current = data[time].current
+    this.current = data[time].current //update current and past time values
     this.previous = data[time].previous
-    this.pastString = this.last[time]
+    this.pastString = this.last[time] //set previous date text
   }
 
 }

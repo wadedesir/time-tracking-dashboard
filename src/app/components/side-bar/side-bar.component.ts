@@ -12,7 +12,7 @@ import { CommonService } from 'src/app/services/common.service'
 export class SideBarComponent {
     @Input() timeScale?: TimeScale;
     @Input() parent?: AppComponent;
-    times: TimeScale[] = ['daily', 'weekly', 'monthly'] //create each anchor that updates the time scale variable
+    times: TimeScale[] = ['daily', 'weekly', 'monthly'] //Selectable time options that will be loaded on sidebar
 
     constructor(private commonService: CommonService){}
 
