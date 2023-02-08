@@ -40,7 +40,7 @@ Users should be able to:
 - CSS custom properties: Helped to organize the colors and styles provided for this project
 - Lots of Flexbox
 - Mobile-first layout
-- [Angular](https://angular.io/) - Web Framework. First time usign this. Tons of fun
+- [Angular](https://angular.io/) - Web Framework. First time using this. Tons of fun
 
 ### What I learned
 
@@ -48,7 +48,7 @@ Angular is FUN! Totally not what I was expecting as I am coming from react based
 
 Working with actual HTML code again instead of the usual JSX was weird, although they put a spin on just how much you are able to do with these html tags. Being able to create a loop for html tags is pretty cool. Because It can be a drag rewriting html code sometimes. I'm sure there's so much more than just the \*ngFor that I learned about.
 
-Typescript can also be very finnicky. It does make some things easier to work with but you have to know what you're doing. Intellisense works alot better since it knows which types you're working with and can it can provide better suggestions, but the type checking can get in the way. I did have to resort to using the ! to let it know at some moments that a variable would definitely have a value. I'm sure there's a more standard way to do it but that was the solution that worked for me.
+Typescript can also be very finicky. It does make some things easier to work with but you have to know what you're doing. Intellisense works alot better since it knows which types you're working with and can it can provide better suggestions, but the type checking can get in the way. I did have to resort to using the ! to let it know at some moments that a variable would definitely have a value. I'm sure there's a more standard way to do it but that was the solution that worked for me.
 
 All in all I'm super happy I was able to complete this project in a fairly decent amount of time. I think my slight experience with typescript helped a little bit and also the fact that things are fairly simple once you understand a few key parts of angular.
 
@@ -56,11 +56,17 @@ All in all I'm super happy I was able to complete this project in a fairly decen
 
 ### Here are some snippets of code I feel particularly proud of:
 
-This was a nice little templating hack that becomes possible with angular. in the past I would have used a framework like EJS or standard JSX to accomplish the same thing but this is how Angular implements it
+This is just a quick example of what angular makes possible. Here i've used an \*ngFor attribute that creates an individual span element for each clickable time option the user has access to. I've also set the current active option using a quick conditional that checks if that specific element contains the text for the currently active time scale.
 
 ```html
-<img src="assets/images/icon-{{title}}.svg" class="icon" />
-<!-- grabs svg file based on title of card-->
+<span
+  class="timeOption"
+  *ngFor="let time of times"
+  [class.active]="time === timeScale"
+  (click)="changeTime(time)"
+>
+  {{time}}
+</span>
 ```
 
 This piece of CSS right here came in handy as well.What I wanted to accomplish was to have a hover state for an ellipsis icon that would get brighter. With a normal svg I would have been to edit the colors directly with CSS but since it was within an img tag, I had to revert to other devices.
