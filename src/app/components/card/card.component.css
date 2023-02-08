@@ -156,3 +156,9 @@
         min-height: 270px;
     }
 }
+
+@media screen and (min-width: 2560px){ 
+    .hours{
+        font-size: 3vw;
+    }
+  }

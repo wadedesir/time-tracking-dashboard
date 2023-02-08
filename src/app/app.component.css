@@ -46,10 +46,21 @@
   }
 }
 
-@media screen and (min-width: 1625px){
-    
+@media screen and (min-width: 1625px){ 
   .main{
       height: 60vh;
       width: 80vw;
+  }
+}
+
+@media screen and (min-width: 2000px){ 
+  .main{
+      width: 64vw;
+  }
+}
+
+@media screen and (min-width: 2560px){ 
+  .main{
+      width: 50vw;
   }
 }
