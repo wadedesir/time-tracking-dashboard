@@ -1,4 +1,4 @@
-# Harvard D^3 Take-Home - Time tracking dashboard solution
+# Time tracking dashboard 
 
 This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
 
